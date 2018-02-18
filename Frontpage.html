@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lightspeed</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<link rel="shortcut icon" href="images/lightspeed.png">
+	</head>
+	<style>
+
+	* {
+		font-family: 'Ubuntu', sans-serif; 
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+
+	body {
+		background-color: grey;
+		background-image: url(images/bg3.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow-y: scroll;
+		overflow-x: hidden;
+       
+
+	}
+	.navtext a {
+		color: black!important;
+		transition: background-color .5s;
+	}
+	.navtext a:hover{
+		color: black!important;
+	}
+	.navcon {
+		padding: 0 70px 0 70px;
+		border-bottom: 1px solid white;
+		background-color: #eee;
+	}
+	.navcon li {
+		display: inline-block;
+	}
+	.navcon ul {
+		white-space: nowrap;
+	}
+	.nav a {
+		font-family: 'Archivo Black', sans-serif !important;
+		color: grey !important;
+	}
+	.radios {
+		word-spacing: 10px;
+	}
+	.modcon {
+		background: white;
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
+		margin-top: 50px;
+		border-radius: 5px;
+	}
+	.modthankscon {
+		height: 180px;
+		background: white;
+		width: 300px;
+		margin: 0 auto;
+	}
+	.modthanks {
+		padding: 10px;
+		text-align: center;
+	}
+	.modclosebutton {
+		width: 50%;
+		margin: 5px auto;
+		text-align: center;
+	}
+	#subject {
+		color: black;
+		padding: 10px;
+		border-radius: 10px;
+		width: 80%;
+	}
+	form-group input {
+		width: 120px !important;
+	}
+	form-horizontal {
+		margin-right: 20px !important;
+		margin-left: 20px !important;
+	}
+
+	/* Page CSS */
+
+	.jubocontent {
+		background-color: #7EE8FA;
+		text-align: center;
+		
+		margin: 0 auto;
+		height: 1000px;
+		opacity: 0.8;
+	}
+	.jumbocon {
+		
+		margin: 0 auto;
+		margin-top: 250px;
+	}
+	.jumbotxt {
+		color: black;
+	}
+	.jumbotitle {
+		font-size: 80px!important;
+	}
+
+	.contentcon {
+		
+		background-color: #fff;
+	}
+	.aboutcon {
+		background-color: #8DB580;
+		color: white;
+		opacity: 0.9;
+	}
+	.aboutbg {
+		background-image: url(images/bg4.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+	}
+	.logo {
+		width: 20px;
+		height: 35px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.aboutlogo {
+		width: 250px;
+		height: 250px;
+		display: block;
+  	  	margin-left: auto;
+   		margin-right: auto;
+   		top: 50px;
+   		position: relative;
+   		width: 250px;
+	}
+	.abouttextcon {
+		width: 70%;
+		margin: 0 auto;
+		padding: 100px;
+		text-align: left;
+	}
+	.aboutcon h3 {
+		text-align: center;
+	}
+	.aboutcon h4 {
+		text-indent: 50px;
+	}
+
+
+	.homecon {
+		background-image: url(images/promo01.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 450px;
+        color: white;
+        padding: 50px!important;
+        
+
+	}
+	.otgcon {
+		background-image: url(images/promo02.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 450px;
+        color: white;
+        padding: 50px!important;
+       
+
+	}
+	.businesscon {
+		background-image: url(images/promo03.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 450px;
+        color: white;
+        padding: 50px!important;
+       
+
+
+	}
+	.homecon, .otgcon, .businesscon {
+		padding: 20px;
+	}
+
+	@media only screen and (max-width: 1600px) {
+	.homecon {
+		background-image: url(images/promo01.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 560px;
+	}	
+	.otgcon {
+		background-image: url(images/promo02.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 560px;
+	}
+	.businesscon {
+		background-image: url(images/promo03.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 560px;
+    }
+	}
+	@media only screen and (max-width: 1050px) {
+	.homecon {
+		background-image: url(images/promo01.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 750px;
+	}
+	.otgcon {
+		background-image: url(images/promo02.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 750px;
+	}
+	.businesscon {
+		background-image: url(images/promo03.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 750px;
+    }
+	}	
+	@media only screen and (max-width: 990px) {
+	.homecon {
+		background-image: url(images/promo01.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 250px;
+	}
+	.otgcon {
+		background-image: url(images/promo02.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 250px;
+	}
+	.businesscon {
+		background-image: url(images/promo03.jpg);
+		background-position: center;
+        background-size: cover;
+        min-height: 250px;
+    }
+	}
+	.col-md-4 {
+		padding: 0px!important;
+	}
+	.buttoncon {
+		padding: 20px;
+		text-align: right;
+	}
+	.bizplanbtn {
+		background-color: #4C4C9D;
+		color: white;
+	}
+	.mobileplanbtn {
+		background-color: #856084;
+		color: white;
+	}
+	.homeplanbtn {
+		background-color: #DB9D47;
+		color: white;
+	}
+	footer {
+		background-color: black;
+		color: white;
+		text-align: right;
+	}
+	.row h1 {
+		margin-top: -10px;
+		margin-bottom: 30px
+	}
+
+		</style>
+	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script src="bootstrap.min.js"></script>
+  
+    	<!-- Start Coding Here -->
+    		
+    		<div class="content">
+	    		<nav class="navbar navbar-fixed-top ">
+				  	<div class="container-fluid navcon">
+						<ul class="nav navbar-nav navbar-right navtext">
+							<li><a href="Frontpage.html"><strong>Home</a></li></strong>
+							<li><a href="Plans.html"><strong>All Plans &amp; Promos</a></li></strong>
+							<li><a href="https://www.facebook.com" target="_blank"><strong>Like us on FB</a></li></strong>
+							<li><a href="#" data-toggle="modal" data-target="#myModal"><strong>Contact Us</a></li></strong>
+						</ul>
+					</div>
+				</nav>
+			</div>	
+
+			
+
+				
+
+
+		    							    <!-- Build Modal -->
+					<div id="myModal" class="modal modcon" role="dialog">
+		  				<div class="modal-dialog">
+		  				 
+		            		<div class="modal-header">
+		                		<button type="button" class="close" data-dismiss="modal">
+				                    <span aria-hidden="true">&times;</span>
+				                    <span class="sr-only">Close</span>
+		               			</button>
+		               				<h4 class="modal-title" id="myModalLabel"><strong>Talk to us</strong></h4>
+		            		</div>
+
+		            		<div class="modal-body">
+			                
+			                	<form class="form-horizontal" role="form">
+			                  		<div class="form-group">
+			                   		 	<label class="col-sm-2 control-label">Full Name </label>
+			                    			<div class="col-sm-10">
+			                        			<input type="text" id="subject" class="form-control" placeholder="Enter Full Name"/>
+			                    			</div>
+			                		</div>
+
+				                  	<div class="form-group">
+				                    	<label class="col-sm-2 control-label" for="inputPassword3">Email</label>
+				                    		<div class="col-sm-10">
+				                        		<input type="email" id="subject" id="inputPassword3" class="form-control" placeholder="Enter Valid Email"/>
+				                    		</div>
+				                  	</div>
+
+				                  	<div class="form-group">
+			                   		 	<label class="col-sm-2 control-label">Address </label>
+			                    			<div class="col-sm-10">
+			                        			<input type="text" id="subject" class="form-control" placeholder="House #, Street, City,"/>
+			                    			</div>
+			                		</div>
+
+									<div class="form-group">
+			                   		 	<label class="col-sm-2 control-label">Contact </label>
+			                    			<div class="col-sm-10">
+			                        			<input type="text" id="subject" class="form-control" placeholder="+639.."/>
+			                    			</div>
+			                		</div>			
+
+				                  	<div class="form-group">
+				                    	<label class="col-sm-2 control-label">Questions?</label>
+				                    		<div class="col-sm-10">
+				                        		<textarea id="subject" rows="9" class="form-control" cols="54" name="subject" placeholder="Ask us anything.. "></textarea>
+				                    		</div>
+				                  	</div>
+				                  	
+
+
+				                  	<div class="form-group">
+				                    	<div class="col-sm-offset-2 col-sm-10">
+				                      		<button type="submit" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#thanks">Submit</button>
+					                    </div>
+				                 	</div>	
+
+			                	</form>
+		  					</div>
+		  				</div>
+		  			</div>	
+		  			<!-- End of Build modal -->	
+			   
+
+
+
+
+
+			    	    <!-- Thank you modal -->
+					<div class="modal fade" id="thanks" role="dialog">
+					 	<div class="modal-dialog">
+					      	<div class="modal-content modthankscon">
+					       		<div class="modal-header">
+					         		<button type="button" class="close" data-dismiss="modal">&times;</button>
+					          			<h4 class="modal-title">Thank you!</h4>
+					        	</div>
+					        		<div class="modal-body">
+					          			<p>We'll contact you within <strong>24 hours.</strong></p>
+					        		</div>
+					        		<div class="modal-footer">
+					         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        		</div>
+					     	 </div>
+					    </div>
+					</div>
+			<!-- End of thank you modal -->
+
+
+
+
+
+
+
+
+			
+				<!-- Jumbotron -->
+				<div class="jumbotron jubocontent">
+					<div class="jumbocon">
+					  <h1 class="jumbotitle"><strong>Welcome to Lightspeed</strong></h1>
+					  	<p class="jumbotxt">Tired of having Turtle-like internet connection? Step into the <strong>Light&reg;!</strong></p>
+					 	<p>
+						  <a class="btn btn-danger featuredbtn btn-lg" href="Availability.html" role="button">Check Availability</a>
+						</p>
+					</div>	
+				</div>
+				<!-- End of Jumbotron -->
+
+
+
+
+
+
+
+
+				<!-- About Lightspeed -->
+				<div class="aboutbg">
+					<div class="aboutcon">
+						<div class="aboutlogocon">
+							<img src="images/lightspeed.png" class="aboutlogo img-responsive">
+						</div>	
+						<div class="abouttextcon">
+							<h3>Why choose Lightspeed?</h3>
+							<h4>Lightspeed is a private company that provides fiber-optic high speed internet to home and business owners. We know the frustration of having slow internet speeds for such a high price in this country. Consumers are stuck with only a few ISPs that are playing the same cards so we are glad to step in and change the game and make the internet a better, yet affordable, place. Check out our <a href="Plans.html">Plans &amp; Promos</a> to see what we brought on the table.</h4>
+						</div>
+					</div>
+				</div>
+				<!-- End of About -->
+
+				<!-- Promos -->
+				
+					<div class="row">
+						<div class="col-md-4">
+							<div class="homecon">
+								<h1>Light&reg; up your home</h1>
+								<h4>Connect your home to the internet with our Home Deluxe&reg; <strong>20 Mbps</strong> for only <strong>$14.99/month.</strong></h4>
+									<ul>
+										<li>No monthly data cap</li>
+										<li>No hidden charges</li>
+										<li>Free intsallation</li>
+									</ul>
+									<p> *2-year lock in</p>	
+									<p> *One-time modem fee</p>	
+							 	<div class="buttoncon"><a class="btn btn-default homeplanbtn btn-sm" href="Plans.html" role="button">I'm interested</a></div>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="otgcon">
+							<h1>Always on the go?</h1>
+							<h4>Worry no more about being disconnected while on the go. Mobile Premium&reg; <strong>5 Mbps</strong> can be yours for only <strong>$9.99/month</strong> with free advanced pocket wifi device that could handle 10 wireless connections.</h4>
+								<ul>
+									<li>No monthly data cap</li>
+									<li>No hidden charges</li>
+									<li>Free PocketLight&reg;</li>
+								</ul>
+								<p> *1-year lock in</p>	
+						 	<div class="buttoncon"><a class="btn btn-default mobileplanbtn btn-sm" href="Plans.html" role="button">I'm interested</a></div>
+						
+							</div>
+
+						</div>
+
+						<div class="col-md-4">
+							<div class="businesscon">
+								<h1>For your growing business</h1>
+								<h4>Time is money. Forget the slow internet speeds from other providers and step right into the future of data transfering. With Business Startup&reg;, modernize your operation and get <strong>10 Gbps</strong> for only <strong>$59.99/month.</strong> Never get disconnected again!</h4>
+									<ul>
+										<li>No monthly data cap</li>
+										<li>No hidden charges</li>
+									</ul>
+									<p>*3-year lock in</p>
+							 	<div class="buttoncon"><a class="btn btn-default bizplanbtn btn-sm" href="Plans.html" role="button">I'm interested</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End of Promos -->					
+			 <!-- end div for content -->
+
+			<footer>
+					This is owned by Timothy Clarence A. Cruz. All rights reserved.
+			</footer>	
+    </body>
+
+</html>  

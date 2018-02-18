@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Availability</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<link rel="shortcut icon" href="images/lightspeed.png">
+	</head>
+	<style>
+
+	* {
+		font-family: 'Ubuntu', sans-serif; 
+	}
+	body {
+		background-color: ;
+		background-image: url(images/avail.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        overflow-y: scroll;
+		overflow-x: hidden;
+
+	}	
+	.navtext a {
+		color: black!important;
+		transition: background-color .5s;
+	}
+	.navtext a:hover{
+		color: black!important;
+	}
+	.navcon {
+		padding: 0 70px 0 70px;
+		border-bottom: 1px solid white;
+		background-color: #eee;
+	}
+	.navcon li {
+		display: inline-block;
+	}
+	.navcon ul {
+		white-space: nowrap;
+	}
+	.nav a {
+		font-family: 'Archivo Black', sans-serif !important;
+		color: grey !important;
+	}
+	.radios {
+		word-spacing: 10px;
+	}
+	.modcon {
+		background: white;
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
+		margin-top: 50px;
+		border-radius: 5px;
+	}
+	.modthankscon {
+		height: 180px;
+		background: white;
+		width: 300px;
+		margin: 0 auto;
+	}
+	.modthanks {
+		padding: 10px;
+		text-align: center;
+	}
+	.modclosebutton {
+		width: 50%;
+		margin: 5px auto;
+		text-align: center;
+	}
+	#subject {
+		color: black;
+		padding: 10px;
+		border-radius: 10px;
+		width: 80%;
+	}
+	form-group input {
+		width: 120px !important;
+	}
+	.modal-body {
+		margin: 0 auto;
+	}
+
+	/* Page CSS */
+
+/*	div {border:2px solid red;}*/
+
+	.allcon {
+		padding: 130px;
+	}
+
+	.pagetitlecon h1 {
+		font-size: 80px;
+	}
+	.pagetitlecon {
+		margin-top: 80px;
+		padding: 30px;
+		background-color: #ACEDFF; 
+	}
+	h1 {
+		text-align: center;
+		font-size: 50px;
+		
+	}
+	.row li {
+		font-size: 30px;
+	}
+	.listcenter {
+		padding: 40px;
+		border-top: 1px solid black;
+	}
+	.notifycon {
+	 	margin: 30px 0px 30px 0px;
+	 	padding: 20px;
+	}
+	.buttoncon {
+		text-align: center;
+	}
+	.luzcon, .viscon, .mindacon, .notifycon {
+		border: 2px solid black;
+		margin-top: 30px;
+		border-radius: 20px;
+		background-color: white
+	}
+	.mod2con {
+		background: white;
+		width: 600px;
+		height: 350px;
+		margin: 0 auto;
+		margin-top: 50px;
+		border-radius: 5px;
+	}
+	.modthanks2con {
+		height: 200px;
+		background: white;
+		width: 300px;
+		margin: 0 auto;
+	}
+
+
+	</style>
+		<body>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    	<script src="bootstrap.min.js"></script>
+    	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+    	<!-- This is the Navbar -->	
+    		<div class="content">
+	    		<nav class="navbar navbar-fixed-top">
+				  	<div class="container-fluid navcon">
+						<ul class="nav navbar-nav navbar-right navtext">
+							<li><a href="Frontpage.html"><strong>Home</a></li></strong>
+							<li><a href="Plans.html"><strong>All Plans &amp; Promos</a></li></strong>
+							<li><a href="https://www.facebook.com" target="_blank"><strong>Like us on FB</a></li></strong>
+							<li><a href="#" data-toggle="modal" data-target="#myModal"><strong>Contact Us</a></li></strong>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<!-- End of Navbar -->	
+
+
+
+
+
+			<!-- Build Modal -->
+					<div id="myModal" class="modal modcon" role="dialog">
+		  				<div class="modal-dialog">
+		  				 
+		            		<div class="modal-header">
+		                		<button type="button" class="close" data-dismiss="modal">
+				                    <span aria-hidden="true">&times;</span>
+				                    <span class="sr-only">Close</span>
+		               			</button>
+		               				<h4 class="modal-title" id="myModalLabel"><strong>Talk to us</strong></h4>
+		            		</div>
+
+		            		<div class="modal-body">
+		                
+		                	<form class="form-horizontal" role="form">
+		                  		<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Full Name </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="Enter Full Name"/>
+		                    			</div>
+		                		</div>
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label" for="inputPassword3">Email</label>
+			                    		<div class="col-sm-10">
+			                        		<input type="email" id="subject" id="inputPassword3" class="form-control" placeholder="Enter Valid Email"/>
+			                    		</div>
+			                  	</div>
+
+			                  	<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Address </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="House #, Street, City,"/>
+		                    			</div>
+		                		</div>
+
+								<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Contact </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="+639.."/>
+		                    			</div>
+		                		</div>			
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label">Questions?</label>
+			                    		<div class="col-sm-10">
+			                        		<textarea id="subject" rows="9" class="form-control" cols="54" name="subject" placeholder="Ask us anything.. "></textarea>
+			                    		</div>
+			                  	</div>
+			               
+
+			                  	
+
+
+						        <div class="form-group">
+						          	<div class="col-sm-offset-2 col-sm-10">
+						                <button type="submit" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#thanks">Submit</button>
+							        </div>
+						        </div>	
+						    </form>
+					  	</div>
+					</div>	
+			    </div>
+
+			    <!-- End of Build modal -->	
+
+
+
+
+
+
+
+			    	    <!-- Thank you modal -->
+					<div class="modal fade" id="thanks" role="dialog">
+					 	<div class="modal-dialog">
+					      	<div class="modal-content modthankscon">
+					       		<div class="modal-header">
+					         		<button type="button" class="close" data-dismiss="modal">&times;</button>
+					          			<h4 class="modal-title">Thank you!</h4>
+					        	</div>
+					        		<div class="modal-body">
+					          			<p>We'll contact you within <strong>24 hours.</strong></p>
+					        		</div>
+					        		<div class="modal-footer">
+					         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        		</div>
+					     	 </div>
+					    </div>
+					</div>
+
+			<!-- End of thank you modal -->
+
+				<!-- Page Title -->
+				<div class="pagetitlecon">
+					<div class="titlecon">
+						<h1>LightSpeed&reg; Serviceable Cities</h1>
+					</div>
+				</div>
+				<!-- End of Page Title -->	
+
+			<div class="allcon"><!-- Contains All Content -->
+
+				
+
+				<div class="row"><!--First Row-->
+
+					<!-- Luzon -->
+					<div class="col-md-4">
+						<div class="luzcon">
+							<div class="luzcitycon"><h1>Luzon</h1></div>
+							<div class="listcenter">	
+								<ul>
+									<li>Manila</li>
+									<li>Paranaque</li>
+									<li>Valenzuela</li>
+									<li>Bulacan</li>
+									<li>Makati</li>
+									<li>Cavite</li>
+									<li>Baguio</li>
+									<li>Quezon City</li>
+									<li>Taguig</li>
+									<li>Pasig</li>
+									<li>Caloocan</li>
+									<li>Laguna</li>
+									<li>Las Pinas</li>
+									<li>Pampanga</li>
+								</ul>
+							</div>		
+						</div>
+					</div>
+					<!-- End of Luzon -->
+
+					<!-- Visayas -->
+					<div class="col-md-4">
+						<div class="viscon">
+							<h1>Visayas</h1>
+							<div class="listcenter">
+								<ul>
+									<li>Cebu</li>
+									<li>Tagbilaran</li>
+									<li>Iloilo</li>
+									<li>Bacolod</li>
+									<li>Kalibo</li>
+									<li>Dumaguete</li>
+								</ul>
+							</div>		
+						</div>
+					</div>
+					<!-- End of Visayas -->
+
+					<!-- Mindanao -->
+					<div class="col-md-4">
+						<div class="mindacon">
+							<h1>Mindanao</h1>
+							<div class="listcenter">
+								<ul>
+									<li>Zamboanga</li>
+									<li>Marawi</li>
+									<li>Davao</li>
+									<li>Cotabato</li>
+									<li>Surigao</li>
+									<li>Kidapawan</li>
+									<li>General Santos</li>
+									<li>Cagayan de Oro</li>
+									<li>Ozamiz</li>
+									<li>Malaybalay</li>
+								</ul>
+							</div>	
+						</div>
+					</div>
+					<!-- End of Mindanao -->
+				</div>
+				<!-- End of 1st Row-->
+
+
+				<!-- 2nd Row -->
+				<div class="row">
+					<div class="col-md-4 col-md-offset-4">
+						<div class="notifycon">
+							<h3>Don't see your city?</h3>
+							<p>Lightspeed&reg; is just new in the ISP business. We are currently expanding our coverage to give everyone a chance to change their internet lifestyle.</p>
+							<div class="buttoncon"><a class="btn btn-danger notifybtn btn-sm" data-toggle="modal" data-target="#notifyme" role="button">Notify Me</a></div>
+						</div>	
+					</div>
+				</div>
+				<!-- End of 2nd Row -->
+
+
+				<!-- Notify Me Modal -->
+				<div id="notifyme" class="modal mod2con" role="dialog">
+		  				<div class="modal-dialog">
+		  				 
+		            		<div class="modal-header">
+		                		<button type="button" class="close" data-dismiss="modal">
+				                    <span aria-hidden="true">&times;</span>
+				                    <span class="sr-only">Close</span>
+		               			</button>
+		               				
+		            		</div>
+
+		            		<div class="modal-body">
+		                
+		                	<form class="form-horizontal" role="form">
+		                  		<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Full Name </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="Enter full name"/>
+		                    			</div>
+		                		</div>
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label" for="inputPassword3">Email</label>
+			                    		<div class="col-sm-10">
+			                        		<input type="email" id="subject" id="inputPassword3" class="form-control" placeholder="Enter valid email"/>
+			                    		</div>
+			                  	</div>
+
+			                  	<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">City </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="City you live in"/>
+		                    			</div>
+		                		</div>
+
+						        <div class="form-group">
+						          	<div class="col-sm-offset-2 col-sm-10">
+						                <button type="submit" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#thanks2">Submit</button>
+							        </div>
+						        </div>	
+						    </form>
+					  	</div>
+					</div>	
+			    </div>
+
+			    <!-- End of Notify Me modal -->	
+
+
+
+
+
+
+
+			    	    <!-- Thank you modal -->
+					<div class="modal fade" id="thanks2" role="dialog">
+					 	<div class="modal-dialog">
+					      	<div class="modal-content modthanks2con">
+					       		<div class="modal-header">
+					         		<button type="button" class="close" data-dismiss="modal">&times;</button>
+					          			<h4 class="modal-title">Thank you!</h4>
+					        	</div>
+					        		<div class="modal-body">
+					          			<p>We'll contact you once your area is LightSpeed&reg; ready.</p>
+					        		</div>
+					        		<div class="modal-footer">
+					         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        		</div>
+					     	 </div>
+					    </div>
+					</div>
+
+			<!-- End of thank you modal -->
+
+
+
+
+
+
+
+
+    				
+
+    				
+
+
+
+
+
+
+
+			</div><!-- End of Allcon -->
+   		 </body>
+</html>  

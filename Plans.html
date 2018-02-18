@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Plans &amp; Promos</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap3.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+		<link rel="shortcut icon" href="images/lightspeed.png">
+
+	</head>
+
+	<style>
+
+/*	div {
+		border: 1px solid red;
+	}
+*/
+/*	div {
+		border: 1px solid red;
+	}*/
+	* {
+		font-family: 'Ubuntu', sans-serif; 
+	}
+	body {
+		background-color: grey;
+		background-image: url();
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        -webkit-font-smoothing: antialiased;
+        overflow-y: scroll;
+		overflow-x: hidden;
+	}	
+	.navtext a {
+		color: black!important;
+		transition: background-color .5s;
+	}
+	.navtext a:hover{
+		color: black!important;
+	}
+	.navcon {
+		padding: 0 70px 0 70px;
+		border-bottom: 1px solid white;
+		background-color: #eee;
+	}
+	.navcon li {
+		display: inline-block;
+	}
+	.navcon ul {
+		white-space: nowrap;
+	}
+	.nav a {
+		font-family: 'Archivo Black', sans-serif !important;
+		color: grey !important;
+	}
+	.radios {
+		word-spacing: 10px;
+	}
+	.modcon {
+		background: white;
+		width: 600px;
+		height: 600px;
+		margin: 0 auto;
+		margin-top: 50px;
+		border-radius: 5px;
+	}
+	.modthankscon {
+		height: 180px;
+		background: white;
+		width: 300px;
+		margin: 0 auto;
+	}
+	.modthanks {
+		padding: 10px;
+		text-align: center;
+	}
+	.modclosebutton {
+		width: 50%;
+		margin: 5px auto;
+		text-align: center;
+	}
+	#subject {
+		color: black;
+		padding: 10px;
+		border-radius: 10px;
+		width: 80%;
+	}
+	form-group input {
+		width: 120px !important;
+	}
+	.modal-body {
+		margin: 0 auto;
+	}
+
+	/* Page CSS */
+
+
+	.allcon {
+		margin-top: 50px;
+	}
+	.titletext {
+		color: white;
+	}
+	.homeplancon {
+		background-image: url(images/home01.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;		
+	}
+	.homecolor {
+		background-color: #F7C548;
+		opacity: 0.85;
+		color: white;
+	}
+	.mobileplancon {
+		background-image: url(images/otg01.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;			
+	}
+	.mobilecolor {
+		background-color: #856084;
+		opacity: 0.85;
+		color: white;
+	}
+	.bizplancon {
+		background-image: url(images/business01.jpg);
+		-moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;		
+	}
+	.bizcolor {
+		background-color: #4C4C9D;
+		opacity: 0.85;
+		color: white;
+	}
+	.hometitlecon, .mobiletitlecon, .biztitlecon {
+		padding: 40px;
+		text-align: center;
+		font-size: 80px;
+	}
+	.homeplancon, .mobileplancon, .bizplancon {
+		padding: 100px;
+	}
+
+	.homepremium, .homedeluxe, .homeelite, .mobilepremium, .mobiledeluxe, .mobileelite, .bizstartup, .bizenterprise {
+
+		background-color: white;
+		border: 1px solid black;
+		border-radius: 20px;
+		padding: 50px;
+		margin: 20px 5px 20px 5px;
+	}
+	.homeplanbtn, .mobileplanbtn, .bizplanbtn {
+		width: 100px;
+		margin: 0 auto;
+		border-radius: 15px;
+		float: right;
+		display: block;
+	}
+	.bizplanbtn {
+		background-color: #4C4C9D;
+		color: white;
+	}
+	.mobileplanbtn {
+		background-color: #856084;
+		color: white;
+	}
+	.homeplanbtn {
+		background-color: #F7C548;
+		color: white;
+	}
+	ul {
+		list-style: none;
+	}
+	h1 { 
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: -20px;
+	}
+
+	.modthanks2con {
+		height: 200px;
+		background: white;
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	.modlist {
+		height: 35px;
+		border-radius: 10px;
+	}
+
+
+
+
+
+
+
+
+
+	</style>
+	<body>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="bootstrap.min.js"></script>
+	    <!-- Start Coding Here -->
+
+	    	<!-- This is the Navbar -->	
+    		<div class="content">
+	    		<nav class="navbar navbar-fixed-top">
+				  	<div class="container-fluid navcon">
+						<ul class="nav navbar-nav navbar-right navtext">
+							<li><a href="Frontpage.html"><strong>Home</a></li></strong>
+							<li><a href="Availability.html"><strong>Availability</a></li></strong>
+							<li><a href="https://www.facebook.com" target="_blank"><strong>Like us on FB</a></li></strong>
+							<li><a href="#" data-toggle="modal" data-target="#myModal"><strong>Contact Us</a></li></strong>
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<!-- End of Navbar -->	
+
+
+
+
+
+			<!-- Build Modal -->
+					<div id="myModal" class="modal modcon" role="dialog">
+		  				<div class="modal-dialog">
+		  				 
+		            		<div class="modal-header">
+		                		<button type="button" class="close" data-dismiss="modal">
+				                    <span aria-hidden="true">&times;</span>
+				                    <span class="sr-only">Close</span>
+		               			</button>
+		               				<h4 class="modal-title" id="myModalLabel"><strong>Talk to us</strong></h4>
+		            		</div>
+
+		            		<div class="modal-body">
+		                
+		                	<form class="form-horizontal" role="form">
+		                  		<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Full Name </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="Enter Full Name"/>
+		                    			</div>
+		                		</div>
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label" for="inputPassword3">Email</label>
+			                    		<div class="col-sm-10">
+			                        		<input type="email" id="subject" id="inputPassword3" class="form-control" placeholder="Enter Valid Email"/>
+			                    		</div>
+			                  	</div>
+
+			                  	<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Address </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="House #, Street, City,"/>
+		                    			</div>
+		                		</div>
+		 
+								<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Contact </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="+639.."/>
+		                    			</div>
+		                		</div>			
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label">Questions?</label>
+			                    		<div class="col-sm-10">
+			                        		<textarea id="subject" rows="9" class="form-control" cols="54" name="subject" placeholder="Ask us anything.. "></textarea>
+			                    		</div>
+			                  	</div>
+			               
+
+			                  	
+
+
+						        <div class="form-group">
+						          	<div class="col-sm-offset-2 col-sm-10">
+						                <button type="submit" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#thanks">Submit</button>
+							        </div>
+						        </div>	
+						    </form>
+					  	</div>
+					</div>	
+			    </div>
+
+			    <!-- End of Build modal -->	
+
+
+
+
+
+
+
+			    	    <!-- Thank you modal -->
+					<div class="modal fade" id="thanks" role="dialog">
+					 	<div class="modal-dialog">
+					      	<div class="modal-content modthankscon">
+					       		<div class="modal-header">
+					         		<button type="button" class="close" data-dismiss="modal">&times;</button>
+					          			<h4 class="modal-title">Thank you!</h4>
+					        	</div>
+					        		<div class="modal-body">
+					          			<p>We'll contact you within <strong>24 hours.</strong></p>
+					        		</div>
+					        		<div class="modal-footer">
+					         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        		</div>
+					     	 </div>
+					    </div>
+					</div>
+
+			<!-- End of thank you modal -->
+
+		<div class="allcon">
+
+			<!-- Home Package -->
+
+			<div class="row homecolor">
+				<div class="col-md-12 hometitlecon">
+					<div class="hometitle">
+						<p>HomeLight®</p>	
+					</div>
+				</div>	
+			</div>
+
+			<div class="row homeplancon">
+				<div class="col-md-4">
+					<div class="homepremium">
+					<h1>Home Premium $9.99</h1>	
+					<ul>
+						<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 10 Mbps Download and Upload speed</li>
+						<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Free installation</li>
+						<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 10 Gb Cloudlight&reg; storage </li>
+						<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+						<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+							<ul>
+								<li>(901-012345)</li>
+							</ul>
+						</li>
+					</ul>			
+					<div class="buttoncon"><a class="btn btn-default homeplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+				</div>	
+				</div>
+
+				<div class="col-md-4">
+					<div class="homedeluxe">
+					<h1>Home Deluxe $14.99</h1>
+					<ul>
+						<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 20 Mbps Download and Upload speed</li>
+						<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Free installation</li>
+						<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 20 Gb Cloudlight&reg; storage </li>
+						<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+						<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+							<ul>
+								<li>(901-012345)</li>
+							</ul>
+						</li>
+					</ul>			
+					<div class="buttoncon"><a class="btn btn-default homeplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+				</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="homeelite">
+					<h1>Home Elite $29.99</h1>
+					<ul>
+						<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 30 Mbps Download and Upload speed</li>
+						<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Free installation</li>
+						<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 30 Gb Cloudlight&reg; storage </li>
+						<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+						<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+							<ul>
+								<li>(901-012345)</li>
+							</ul>
+						</li>
+					</ul>			
+					<div class="buttoncon"><a class="btn btn-default homeplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+				</div>
+				</div>	
+			</div>	
+			<!-- End of Home Package -->
+
+			<!-- Mobile Package -->
+				<div class="row mobilecolor">
+					<div class="col-md-12 mobiletitlecon">
+						<div class="mobiletitle">
+							<p>MobileLight®</p>	
+						</div>
+					</div>	
+				</div>
+
+			<div class="row mobileplancon">
+				<div class="col-md-4">
+					<div class="mobilepremium">
+					<h1>Mobile Premium $9.99</h1>	
+					<ul>
+						<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 5 Mbps Download and Upload speed</li>
+						<li><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Free PocketLight&reg;</li>
+						<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 5 Gb Cloudlight&reg; storage </li>
+						<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+						<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+							<ul>
+								<li>(901-012345)</li>
+							</ul>
+						</li>
+					</ul>
+					<div class="buttoncon"><a class="btn btn-default mobileplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+				</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="mobiledeluxe">
+					<h1>Mobile Deluxe $14.99</h1>
+					<ul>
+						<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 10 Mbps Download and Upload speed</li>
+						<li><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Free PocketLight&reg;</li>
+						<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 10 Gb Cloudlight&reg; storage </li>
+						<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+						<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+							<ul>
+								<li>(901-012345)</li>
+							</ul>
+						</li>
+					</ul>		
+					<div class="buttoncon"><a class="btn btn-default mobileplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+				</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="mobileelite">
+						<h1>Mobile Elite $19.99</h1>
+						<ul>
+							<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 15 Mbps Download and Upload speed</li>
+							<li><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Free PocketLight&reg;</li>
+							<li><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Free 15 Gb Cloudlight&reg; storage </li>
+							<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+							<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+								<ul>
+									<li>(901-012345)</li>
+								</ul>
+							</li>
+						</ul>		
+						<div class="buttoncon"><a class="btn btn-default mobileplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+					</div>	
+				</div>	
+			</div>
+
+			<!-- End of Mobile Package -->
+
+
+			<!-- Business Package -->
+				<div class="row bizcolor">
+					<div class="col-md-12 biztitlecon">
+						<div class="biztitle">
+							<p>BusinessLight® </p>	
+						</div>
+					</div>	
+				</div>
+
+				<div class="row bizplancon clear">
+					<div class="col-md-4 col-md-offset-2">
+						<div class="bizstartup">
+						<h1>Business Startup $39.99</h1>	
+							<ul>
+								<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 10 Gbps Download and Upload speed</li>
+								<li><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Free PocketLight&reg;</li>
+								<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+								<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+									<ul>
+										<li>(901-012345)</li>
+									</ul>
+								</li>
+							</ul>
+							<div class="buttoncon"><a class="btn btn-default bizplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+						</div>	
+					</div>
+
+					<div class="col-md-4">
+						<div class="bizenterprise">
+							<h1>Business Enterprise $59.99</h1>
+							<ul>
+								<li><span class="glyphicon glyphicon-signal" aria-hidden="true"></span> Up to 25 Gbps Download and Upload speed</li>
+								<li><span class="glyphicon glyphicon-hdd" aria-hidden="true"></span> Free PocketLight&reg;</li>
+								<li><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> No monthly data cap</li>
+								<li><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> 24/7 Customer and Tech support hotline
+									<ul>
+										<li>(901-012345)</li>
+									</ul>
+								</li>
+							</ul>
+							<div class="buttoncon"><a class="btn btn-default bizplanbtn btn-sm" href="#signup" data-toggle="modal" role="button">Sign me up!</a></div>
+						</div>	
+					</div>
+				</div>
+			<!-- End of Business Package -->	
+		
+		</div> <!-- End of allcon -->	
+
+		<!-- Build Modal -->
+					<div id="signup" class="modal modcon" role="dialog">
+		  				<div class="modal-dialog">
+		  				 
+		            		<div class="modal-header">
+		                		<button type="button" class="close" data-dismiss="modal">
+				                    <span aria-hidden="true">&times;</span>
+				                    <span class="sr-only">Close</span>
+		               			</button>
+		               				<h4 class="modal-title" id="myModalLabel"><strong>Your Details</strong></h4>
+		            		</div>
+
+		            		<div class="modal-body">
+		                
+		                	<form class="form-horizontal" role="form">
+
+		                		<div class="form-group">
+		                			<label class="col-sm-2 control-label">Salutation </label>
+			                			<div class="col-sm-2">
+					                		<input list="salutations" name="salutations" class="form-control modlist">
+											  	<datalist id="salutations" class="modlist">
+												    <option value="Mr.">
+												    <option value="Ms.">
+												    <option value="Mrs.">
+											    </datalist>
+										</div>
+								</div>		    
+
+		                  		<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Full Name </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="Enter Full Name"/>
+		                    			</div>
+		                		</div>
+
+			                  	<div class="form-group">
+			                    	<label class="col-sm-2 control-label" for="inputPassword3">Email</label>
+			                    		<div class="col-sm-10">
+			                        		<input type="email" id="subject" id="inputPassword3" class="form-control" placeholder="Enter Valid Email"/>
+			                    		</div>
+			                  	</div>
+
+			                  	<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Birthdate</label>
+		                    			<div class="col-sm-10">
+		                        			<input type="date" id="subject" class="form-control" placeholder="Month"/>
+		                    			</div>
+		                		</div>
+
+			                  	<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Address </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="House #, Street, City,"/>
+		                    			</div>
+		                		</div>
+		 
+								<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label">Contact </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control" placeholder="+639.."/>
+		                    			</div>
+		                		</div>			
+
+								<div class="form-group">
+		                   		 	<label class="col-sm-10 col-sm-offset-2">Are you currently subscribed to another provider? </label>
+		                		</div>
+
+								<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label"> </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="radio" value="Yes">Yes
+		                        			<input type="radio" value="No">No
+		                    			</div>
+		                		</div>
+
+		                		<div class="form-group">
+		                   		 	<label class="col-sm-10 col-sm-offset-2">Name of the provider </label>
+		                		</div>
+
+								<div class="form-group">
+		                   		 	<label class="col-sm-2 control-label"> </label>
+		                    			<div class="col-sm-10">
+		                        			<input type="text" id="subject" class="form-control">
+		                    			</div>
+		                		</div>
+
+
+		                		<div class="form-group">
+		                   		 	<label class="col-sm-10 col-sm-offset-2">Desired Light&reg; Plan </label>
+		                		</div>
+
+
+		                		<div class="form-group">
+		                			<label class="col-sm-2 control-label"> </label>
+			                			<div class="col-sm-8">
+					                		<input list="plans" name="plans" class="form-control modlist">
+											  	<datalist id="plans" class="modlist">
+												    <option value="Home Premium $9.99">
+												    <option value="Home Deluxe $14.99">
+												    <option value="Home Elite $29.99">
+												    <option value="Mobile Premium $9.99.">
+												    <option value="Mobile Deluxe $14.99">
+												    <option value="Mobile Elite $19.99">
+												    <option value="Business Startup $39.99">
+												    <option value="Business Enterprise $59.99">	
+											    </datalist>
+										</div>
+								</div>	
+
+						        <div class="form-group">
+						          	<div class="col-sm-offset-2 col-sm-10">
+						                <button type="submit" class="btn btn-default" data-dismiss="modal" data-toggle="modal" href="#thanks2">Submit</button>
+							        </div>
+						        </div>	
+						    </form>
+					  	</div>
+					</div>	
+			    </div>
+
+			    <!-- End of Build modal -->	
+
+
+
+
+
+
+
+			    	    <!-- Thank you modal -->
+					<div class="modal fade" id="thanks2" role="dialog">
+					 	<div class="modal-dialog">
+					      	<div class="modal-content modthanks2con">
+					       		<div class="modal-header">
+					         		<button type="button" class="close" data-dismiss="modal">&times;</button>
+					          			<h4 class="modal-title">Thank you!</h4>
+					        	</div>
+					        		<div class="modal-body">
+					          			<p>A customer service representative will contact you within <strong>24 hours.</strong></p>
+					        		</div>
+					        		<div class="modal-footer">
+					         			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					        		</div>
+					     	 </div>
+					    </div>
+					</div>
+
+			<!-- End of thank you modal -->
+	</body>
+</html>    	
